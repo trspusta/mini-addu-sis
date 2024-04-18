@@ -1,85 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Submit Grades</title>
-    <link rel='stylesheet' type='text/css' media='screen' href='submitgrades.css'>
-</head>
-<body>
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
     <header>
-        <img src="UniversitySealWhite-1024x1020.png" alt="Ateneo de Davao University Logo">
-        <h1>STUDENT INFORMATION SYSTEM</h1>
-        <div class="navigation">
-            <a href="viewgrades.html">View Grades</a>
-            <a href="submitgrades.html">Submit Grades</a>
-            <a href="courselist.html">Course List</a>
-        </div>
+      <img
+        src="UniversitySealWhite-1024x1020.png"
+        alt="Ateneo de Davao University Logo"
+      />
+      <h1>STUDENT INFORMATION SYSTEM</h1>
+      <div class="navigation">
+        <a href="viewgrades.html">View Grades</a>
+        <a href="submitgrades.html">Submit Grades</a>
+        <a href="courselist.html">Course List</a>
+      </div>
     </header>
-    <div class="input-container">
-     <!--Column 1-->
-     <fieldset>
-        <label>Code/Subject:</label>
-        </fieldset>
-
-        <fieldset>
-        <label>4-114</label>
-        </fieldset>
-
-        <fieldset>
-        <label>Schedule:</label>
-        </fieldset>
-
-        <fieldset>
-        <label>*2:05-4:35P F605 TTh*</label>
-        </fieldset>
-
-        <fieldset>
-        <label>Academic Period:</label>
-        </fieldset>
-
-        <fieldset>
-        <label>2nd Semester 2023-2024</label>
-        </fieldset>
-
-        <fieldset>
-        <label>Grading Period:</label>
-        </fieldset>
-    
-        <fieldset>
-        <label>Final</label>
-        </fieldset>
+    <div class="container mt-4">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="input-container">
+            <div class="mb-3">
+              <label class="form-label">Code/Subject:</label>
+              <p class="form-control-static">4-114</p>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Schedule:</label>
+              <p class="form-control-static">2:05-4:35P F605 TTh</p>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Academic Period:</label>
+              <p class="form-control-static">2nd Semester 2023-2024</p>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Grading Period:</label>
+              <p class="form-control-static">Final</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <h1 class="mb-3">Grade Encoding Guidelines</h1>
+          <ol>
+            <li>
+              Grades in the New Grading System must be encoded as A, B+, B, C+,
+              C, D, F, FD, WP
+            </li>
+            <li>
+              Non FYDP Grades in the OLD Grading System must be from 65 to 100
+            </li>
+            <li>
+              FYDP Grades in the NEW Grading System must be encoded as A, B+, B,
+              C+, C, D, F, FD, WP
+            </li>
+            <li>
+              FYDP Grades in the OLD Grading System must be encoded as 0-
+              Outsanding, HS - Highly Satisfactory, S - Satisfactory, MS -
+              Moderately Satisfactory, F- Fair, P - Poor
+            </li>
+            <li>
+              NE Grades will not be accepted, Students who have not taken exams
+              must be provided the minimum grade. After the exam has been taken,
+              the teacher should file a grade correction form at the Registrar's
+              Office
+            </li>
+            <li>Select AUD for Audit students.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col">
+          <h1 class="mb-3">Grade Table</h1>
+          <table id="student-table" class="table table-bordered table-striped">
+            <thead class="bg-primary text-light">
+              <tr>
+                <th>Code</th>
+                <th>Student Name</th>
+                <th>Prelim</th>
+                <th>Midterm</th>
+                <th>Final</th>
+                <th>Grd. Type</th>
+                <th>Year Level</th>
+                <th>Acad. Status</th>
+                <th>Year of Entry</th>
+                <th>Entry Yr. Lvl</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
     </div>
-
-    <br>
-    <h1>Grade Encoding Guidelines</h1>
-    <ol>
-        <li>Grades in the New Grading System must be encoded as A, B+, B, C+, C, D, F, FD, WP</li>
-        <li>Non FYDP Grades in the OLD Grading System must be from 65 to 100</li>
-        <li>FYDP Grades in the NEW Grading System must be encoded as A, B+, B, C+, C, D, F, FD, WP</li>
-        <li>FYDP Grades in the OLD Grading System must be encoded as 0- Outsanding, HS - Highly Satisfactory, S - Satisfactory, MS - Moderately Satisfactory, F- Fair, P - Poor</li>
-        <li>NE Grades will not be accepted, Students who have not taken exams must be provided the minimum grade. After the exam has been taken, the teacher should file a grade correction form at the Registrar's Office</li>
-        <li>Select AUD for Audit students.</li>
-    </ol>
-    <br>
-    <table id="student-table" border="1" bordercolor="white" bgcolor="#708090" align="center">
-        <thead>
-            <tr>
-                <td>Code</td>
-                <td>Student Name</td>
-                <td>Prelim</td>
-                <td>Midterm</td>
-                <td>Final</td>
-                <td>Grd. Type</td>
-                <td>Year Level</td>
-                <td>Acad. Status</td>
-                <td>Year of Entry</td>
-                <td>Entry Yr. Lvl</td>
-            </tr>
-        </thead>
-        <tbody>
-        </tbody>
-    </table>
     <script src="./submitgrades.js"></script>
-</body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
